@@ -1280,11 +1280,7 @@
                             ></a
                           ></span
                         >
-                        <form
-                          action="https://www.rockauto.com/"
-                          method="post"
-                          class="catalog-search-bar-form"
-                        >
+                       
                           <input
                             type="hidden"
                             name="_nck"
@@ -1302,27 +1298,18 @@
                               <tbody>
                                 <tr>
                                   <td class="input-td td-input">
-                                    <input
-                                      type="text"
-                                      id="topsearchinput[input]"
-                                      name="topsearchinput[input]"
-                                      value=""
-                                      autocomplete="off"
-                                      spellcheck="false"
-                                      autocorrect="off"
-                                      autocapitalize="off"
-                                      placeholder="year make model part type or part number or question"
-                                      maxlength="100"
-                                      class="topsearchinput topsearchwidth remove-browser-x"
-                                      onkeydown="akhandler(event);"
-                                      onkeyup="showList()"
-                                      
-                                      onfocus="acmp_partcategory = null;"
-                                      onclick=" setTimeout(function() {acmp_request();}, 250);"
-                                      style="padding-right: 1.25em;"
-                                    />
-                                    <a>hullo</a>
-                                    <a>howdy</a>
+                                      <div class="dropdown">
+                                          <div id="myDropdown" class="dropdown-content">
+                                            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                                            <a href="#about">About</a>
+                                            <a href="#base">Base</a>
+                                            <a href="#blog">Blog</a>
+                                            <a href="#contact">Contact</a>
+                                            <a href="#custom">Custom</a>
+                                            <a href="#support">Support</a>
+                                            <a href="#tools">Tools</a>
+                                          </div>
+                                        </div>
                                     <span style="position: absolute;"
                                       ><img
                                         id="topsearchinput[input]_search_clear_image"
@@ -21086,6 +21073,26 @@
       </div>
     </div>
     <script>
+      function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  // document.getElementById("myDropdown").classList.toggle("show");
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
       /**UQ:9E407A0B**/
       RABoot.WaitFor("jQuery", function() {
         $(document).ready(function() {
