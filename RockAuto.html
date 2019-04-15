@@ -1299,15 +1299,24 @@
                                 <tr>
                                   <td class="input-td td-input">
                                       <div class="dropdown">
-                                          <div id="myDropdown" class="dropdown-content">
-                                            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                                            <a href="#about">About</a>
-                                            <a href="#base">Base</a>
-                                            <a href="#blog">Blog</a>
-                                            <a href="#contact">Contact</a>
-                                            <a href="#custom">Custom</a>
-                                            <a href="#support">Support</a>
-                                            <a href="#tools">Tools</a>
+                                            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" onkeypress="showList()" class="searching" >
+                                        <div id="myDropdown" class="dropdown-content" size="5">
+                                            <a href="https://www.rockauto.com/docs/warranty">Warranty Summaries</a>
+                                            <a href="https://www.rockauto.com/help/?page=6">About</a>
+                                            <a href="https://www.rockauto.com/orderstatus/">Order Status</a>
+                                            <a href="https://www.rockauto.com/en/moreinfo.php?pk=6319503&cc=1431956">Infiniti 2003 G35 Coupe Philips Passenger Dome Light Bulb Standard</a>
+                                            <a href="https://www.rockauto.com/en/moreinfo.php?pk=8651996&jsn=314">Bosch Spark Plug </a>
+                                            <a href="https://www.rockauto.com/en/catalog/infiniti,2003,g35,3.5l+v6,1431956,engine,cylinder+head,5304">Infiniti 2003 G35 Coupe Engine Cylinder Head</a>
+                                            <a href="https://www.rockauto.com/en/catalog/infiniti,2003,g35,3.5l+v6,1431956,engine,piston,5620">Infiniti 2003 G35 Coupe Engine Piston</a>
+                                            <a href="https://www.rockauto.com/en/catalog/infiniti,2003,g35,3.5l+v6,1431956,engine,oil+pump,5564">Infiniti 2003 G35 Coupe Engine Oil Pump</a>
+                                            <a href="https://www.rockauto.com/help/">Help</a>
+                                            <a href="https://www.rockauto.com/docs/warranty">Warranty Summaries</a>
+                                            <a href="https://www.rockauto.com/repairindex/">Repair Index Calculator</a>
+
+
+  
+
+                                
                                           </div>
                                         </div>
                                     <span style="position: absolute;"
@@ -21073,12 +21082,13 @@
       </div>
     </div>
     <script>
-      function myFunction() {
+      function showList() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
+
 function filterFunction() {
-  // document.getElementById("myDropdown").classList.toggle("show");
+  // document.getElementById("itemList").classList.toggle("show");
   var input, filter, ul, li, a, i;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
@@ -21093,6 +21103,8 @@ function filterFunction() {
     }
   }
 }
+
+
       /**UQ:9E407A0B**/
       RABoot.WaitFor("jQuery", function() {
         $(document).ready(function() {
@@ -21119,19 +21131,7 @@ function filterFunction() {
         "ZExt1ysfqhqWnq+EvUNdS3Txyey60IDtnjPWF5UU9J0BWQv7pvqZbkEUk86+AYIh\/8vGRbRbhjvqZ9sCf1TWknBYz+zKjrfhNjXowbkUEJSxY6v6rgH87EE8hmJFbTLZpnvhbiMcfEf2ZtNEKGTnlVmEENIZ09S\/lWBIh3pd5zjDlz+GjukX3jmZARepiazB26Q9JoZ1ZJ8WJS9vaXzp7kZMbjXBVcXnGodUdHkHAHy5npA5J\/R6USuTpXtlRknkH7cRC4cqcLf\/uJ6fgrTU465lPoJEbPjU4AR2oJxnlR0eqzVmTWJWFN4K27dBCFqXazEUgRywTA8ydnJMc2zQlV+kvVRW5JKZ";
     </script>
 
-    <script>
-    function showList()
-      {
-        var dropdown,a;
-        var arr=["Warranty","Shit","Extras"];
-        dropdown = document.getElementById("topsearchinput[input]");
-        a = dropdown.getElementsByTagName("a");
-        for(i=0;i<arr.length; i++)
-        {
-          a[i].style.display =arr[i];
-        }
-      } 
-    </script>
+   
   </body>
   <div>
     <div class="gr_-editor gr-iframe-first-load" style="display: none;">
